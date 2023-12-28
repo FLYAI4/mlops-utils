@@ -1,12 +1,16 @@
+import os
 import mlflow
+import numpy as np
+import matplotlib.pyplot as plt
 from functools import wraps
 
-class MlflowLogger:
+
+class Sklearn:
     def __init__(self, url: str, port: int) -> None:
         self.url = url
         self.port = port
     
-    def sklearn(self, experiment_name: str = None, run_name: str = None):
+    def logger(self, experiment_name: str = None, run_name: str = None):
         def logging(func):
             @wraps(func)
             def func_decorator(*args, **kwargs):
@@ -19,4 +23,17 @@ class MlflowLogger:
                     print("Logged data and model in run: {}".format(run.info.run_id))
             return func_decorator
         return logging
+    
+    @staticmethod
+    def post_board(y_test: np.ndarray, preds: np.ndarray):
+        scatter_file = "scatter_plot.png"
+        plt.scatter(y_test, preds)
+        plt.xlabel("Actual values")
+        plt.ylabel("Predicted values")
+        plt.savefig(scatter_file)
+        
+        mlflow.log_artifact(scatter_file, artifact_path="plots")
+        
+        if os.path.exists(scatter_file):
+            os.remove(scatter_file)
         
