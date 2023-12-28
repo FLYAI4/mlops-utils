@@ -8,7 +8,7 @@ from mlflow_logger.decorator import MlflowLogger
 mlflow_logger = MlflowLogger("http://127.0.0.1", 5000)
 
 @pytest.mark.asyncio
-@mlflow_logger.sklearn("test_runner")
+@mlflow_logger.sklearn("test_experiment", "test_runner")
 def test_runner_mlflow_logging():
     # prepare training data
     X = np.array([[1, 1], [1, 2], [2, 2], [2, 3]])
