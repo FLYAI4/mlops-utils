@@ -24,4 +24,5 @@ class Pytorch:
                     func(*args, **kwargs)
                     print("Logged data and model in run: {}".format(run.info.run_id))
             return func_decorator
+        # TODO : plt.figure 이미지 추가
         return logging

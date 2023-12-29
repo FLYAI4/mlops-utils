@@ -3,3 +3,8 @@ mlruns
 __pycache__
 .pytest_cache
 mlartifacts
+MNIST
+lightning_logs
+build
+dist
+mlops_utils.*
