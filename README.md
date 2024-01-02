@@ -1,2 +1,27 @@
-# mlops-utils
-mlops-utils : MLFlow, Airflow 등 mlops 인프라 활용을 위한 utils 모듈
+# MLOps Utils
+mlops-utils is a collection of tools for managing MLOps infrastructure.
+
+<br>
+## Installation
+Install using via PyPi
+
+
+```bash
+pip install mlops-utils
+```
+
+<br>
+
+## Requirements
+Python 3.10 or higher is required.
+For automatic tracking in PyTorch logging, versions between 1.9.0 and 2.1.1 (inclusive) are supported
+
+<br>
+
+## Documentation
+Documentation will be added soon. Stay tuned for updates!
+
+
+
+
+

@@ -15,6 +15,7 @@ from sklearn.pipeline import Pipeline
 from mlops_utils.mlflow_logger.sklearn import Sklearn
 from mlops_utils.mlflow_logger.pytorch import Pytorch
 
+
 sklearn = Sklearn("http://127.0.0.1", 5000)
 pytorch = Pytorch("http://127.0.0.1", 5000)
 

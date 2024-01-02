@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="mlops-utils",
-    version="0.0.1",
+    version="0.0.2",
     author="robert-min",
     author_email="robertmin522@gmail.com",
     description="mlops utils",
@@ -17,8 +17,9 @@ setuptools.setup(
         "numpy",
         "pandas",
         "matplotlib",
-        "mlflow==2.9.2",
-        "scipy==1.11.4",
+        "mlflow",
+        "scipy",
+        "setuptools"
         ],
     classifiers=[
         "Programming Language :: Python :: 3.10"

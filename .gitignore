@@ -8,3 +8,4 @@ lightning_logs
 build
 dist
 mlops_utils.*
+key.txt
